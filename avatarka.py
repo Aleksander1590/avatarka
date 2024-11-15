@@ -1,5 +1,5 @@
 from PIL import Image
-image = Image.open("C:\\python_scripts\\4-Narezaem_avatarki\\example.jpg")
+image = Image.open("example.jpg")
 rgb_image = image.convert("RGB")
 (red, green, blue) = rgb_image.split()
 
@@ -27,7 +27,7 @@ coordinates5 = (displacement_value2, 0, displacement_value3, 417)
 cropped5 = image5.crop(coordinates5)
 
 merge_image = Image.merge("RGB", (blend_displacement1, cropped5, blend_displacement2))
-merge_image.save("C:\\python_scripts\\4-Narezaem_avatarki\\final.jpg")
-final_resized = Image.open("C:\\python_scripts\\4-Narezaem_avatarki\\final.jpg")
+merge_image.save("final.jpg")
+final_resized = Image.open("final.jpg")
 final_resized.thumbnail((80, 80))
-final_resized.save("C:\\python_scripts\\4-Narezaem_avatarki\\final_resized.jpg")
+final_resized.save("final_resized.jpg")
